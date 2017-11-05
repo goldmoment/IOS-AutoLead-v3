@@ -1,0 +1,26 @@
+{
+  "Device": {
+    "MCC": "310",
+    "MNCC": "10",
+    "IOS": "us",
+    "Country": "United States",
+    "CountryCode": "1",
+    "Network": "Verizon Wireless",
+    "DeviceName:": "mclay",
+    "AdvId": "1ee67c-ec69-dc69-19b8-d177b368e2ae",
+    "CpuCount": "2",
+    "CpuFreq": "1.4ghz",
+    "HWModel": "iPhone7,2",
+    "IdForVendor": "null",
+    "MemorySize": "1 GB",
+    "ModelName": "iPhone7,2",
+    "OSVersion": "10.3",
+    "ScreenHeight": "1334",
+    "ScreenWidth": "750",
+    "TotalDiskSpace": 55.68,
+    "UsedDiskSpace": 39.68,
+    "FreeDiskSpace": 16,
+    "SSIDInfo:": "pollett",
+    "NetworkInfo": "Wifi"
+  }
+}
