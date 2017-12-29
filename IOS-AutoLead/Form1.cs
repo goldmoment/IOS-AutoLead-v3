@@ -49,6 +49,11 @@ namespace IOS_AutoLead
             }
             throw new Exception("Local IP Address Not Found!");
         }
+        public Form1(string text)
+        {
+            InitializeComponent();
+            textBox4.Text = text; //txtbx1 does not need to be public
+        }
         public Form1()
         {
             InitializeComponent();
@@ -291,7 +296,7 @@ namespace IOS_AutoLead
             button22.Enabled = bl;
             button21.Enabled = bl;
             button20.Enabled = bl;
-            button24.Enabled = bl;
+        //    button24.Enabled = bl;
             button25.Enabled = bl;
             button26.Enabled = bl;
             txtidPortProxy.Enabled = bl;
@@ -1148,11 +1153,7 @@ namespace IOS_AutoLead
             
         }
 
-        private void button23_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+ 
         private void button20_Click(object sender, EventArgs e)
         {
             ThreadRunLead runthr = new ThreadRunLead();
@@ -1588,6 +1589,75 @@ namespace IOS_AutoLead
                 sshnet.deleteFileLuu(dataGridView3.Rows[i].Cells[0].Value.ToString());
             }
             dataGridView3.Rows.Clear();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            if (iStatic.closeForm3 == "")
+            {
+                Thread thrscript = new Thread(() =>
+                 {
+                     while (iStatic.closeForm3 != "success")
+                     {
+                         if (Form3.MouseMove != string.Empty)
+                         {
+                             textBox4.Text = Form3.MouseMove;
+                             textBox2.Text = Form3.xm.ToString();
+                             textBox3.Text = Form3.ym.ToString();
+                         }
+                         if (Form3.ScriptCode != string.Empty)
+                         {
+                             richTextBox2.AppendText(Form3.ScriptCode);
+                             Form3.ScriptCode = string.Empty;
+                         }
+                     }
+                     iStatic.closeForm3 = "";
+                 });
+
+                thrscript.Start();
+
+                Form3 frm3 = new Form3();
+                frm3.Show();
+            }
+          //  thrscript.Abort();
+        }
+        public static int record = 0;
+        private void button23_Click_1(object sender, EventArgs e)
+        {
+            if(button23.Text == "Record")
+            {
+                button23.Text = "Stop Record";
+                record = 1;
+            }
+            else
+            {
+                button23.Text = "Record";
+                record = 0;
+            }
+        }
+        Thread threadScript;
+        private void button18_Click_2(object sender, EventArgs e)
+        {
+            if (button18.Text == "Run Script")
+            {
+                button18.Text = "Stop Script";
+                threadScript = new Thread(() => {
+                    ThreadRunLead run = new IOS_AutoLead.ThreadRunLead();
+                    run.script(richTextBox2.Lines);
+                });
+                threadScript.Start();
+            }
+            else
+            {
+                button18.Text = "Run Script";
+                try
+                {
+                    threadScript.Abort();
+                }
+                catch { }
+            }
+           
         }
     }
 }

@@ -102,14 +102,20 @@
             this.CountryRRS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button27 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button27 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button26 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -171,6 +177,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtidPortProxy = new System.Windows.Forms.TextBox();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -179,6 +186,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -199,7 +207,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(658, 422);
+            this.tabControl1.Size = new System.Drawing.Size(658, 443);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -230,7 +238,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(650, 396);
+            this.tabPage1.Size = new System.Drawing.Size(650, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -503,7 +511,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(650, 396);
+            this.tabPage2.Size = new System.Drawing.Size(650, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Proxy";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -686,7 +694,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(650, 396);
+            this.tabPage3.Size = new System.Drawing.Size(650, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "RRS";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -916,22 +924,108 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button23);
+            this.tabPage4.Controls.Add(this.groupBox6);
+            this.tabPage4.Controls.Add(this.button18);
+            this.tabPage4.Controls.Add(this.richTextBox2);
             this.tabPage4.Controls.Add(this.button27);
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(650, 396);
+            this.tabPage4.Size = new System.Drawing.Size(650, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Support";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button19);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Controls.Add(this.label39);
+            this.groupBox6.Controls.Add(this.label38);
+            this.groupBox6.Location = new System.Drawing.Point(10, 56);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(331, 86);
+            this.groupBox6.TabIndex = 11;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Touch Support";
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(198, 20);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(127, 23);
+            this.button19.TabIndex = 5;
+            this.button19.Text = "Enable Mouse";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(195, 59);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(130, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(75, 60);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(76, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(75, 20);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(76, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(7, 62);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(57, 13);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Position Y:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(7, 23);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(57, 13);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Position X:";
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(376, 7);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(87, 40);
+            this.button18.TabIndex = 10;
+            this.button18.Text = "Run Script";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click_2);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(376, 56);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(268, 354);
+            this.richTextBox2.TabIndex = 9;
+            this.richTextBox2.Text = "";
             // 
             // button27
             // 
             this.button27.Location = new System.Drawing.Point(6, 6);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(113, 44);
+            this.button27.Size = new System.Drawing.Size(83, 44);
             this.button27.TabIndex = 2;
             this.button27.Text = "Reset Iphone";
             this.button27.UseVisualStyleBackColor = true;
@@ -939,49 +1033,28 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button18);
-            this.groupBox3.Controls.Add(this.richTextBox2);
             this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.button26);
             this.groupBox3.Controls.Add(this.button25);
-            this.groupBox3.Controls.Add(this.button24);
             this.groupBox3.Controls.Add(this.button22);
             this.groupBox3.Controls.Add(this.button21);
-            this.groupBox3.Location = new System.Drawing.Point(3, 119);
+            this.groupBox3.Location = new System.Drawing.Point(11, 261);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(644, 271);
+            this.groupBox3.Size = new System.Drawing.Size(334, 82);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(480, 242);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 8;
-            this.button18.Text = "Run Script";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click_1);
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(399, 9);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(239, 227);
-            this.richTextBox2.TabIndex = 7;
-            this.richTextBox2.Text = "";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 32);
+            this.comboBox1.Location = new System.Drawing.Point(2, 47);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 21);
+            this.comboBox1.Size = new System.Drawing.Size(175, 21);
             this.comboBox1.TabIndex = 6;
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(223, 32);
+            this.button26.Location = new System.Drawing.Point(243, 44);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(75, 23);
             this.button26.TabIndex = 5;
@@ -991,7 +1064,7 @@
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(220, 125);
+            this.button25.Location = new System.Drawing.Point(244, 12);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(75, 25);
             this.button25.TabIndex = 4;
@@ -999,19 +1072,9 @@
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(3, 59);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 25);
-            this.button24.TabIndex = 3;
-            this.button24.Text = "Install App";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Visible = false;
-            // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(101, 125);
+            this.button22.Location = new System.Drawing.Point(117, 12);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(98, 25);
             this.button22.TabIndex = 1;
@@ -1021,7 +1084,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(3, 125);
+            this.button21.Location = new System.Drawing.Point(3, 13);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(75, 25);
             this.button21.TabIndex = 0;
@@ -1034,16 +1097,16 @@
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.button20);
-            this.groupBox2.Location = new System.Drawing.Point(6, 56);
+            this.groupBox2.Location = new System.Drawing.Point(13, 170);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(638, 57);
+            this.groupBox2.Size = new System.Drawing.Size(331, 63);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(7, 22);
+            this.label26.Location = new System.Drawing.Point(6, 16);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(26, 13);
             this.label26.TabIndex = 2;
@@ -1051,14 +1114,14 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(51, 19);
+            this.textBox6.Location = new System.Drawing.Point(51, 13);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(424, 20);
+            this.textBox6.Size = new System.Drawing.Size(274, 20);
             this.textBox6.TabIndex = 1;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(521, 16);
+            this.button20.Location = new System.Drawing.Point(132, 37);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(75, 23);
             this.button20.TabIndex = 0;
@@ -1078,7 +1141,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(650, 396);
+            this.tabPage6.Size = new System.Drawing.Size(650, 417);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Script";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1172,7 +1235,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(650, 396);
+            this.tabPage5.Size = new System.Drawing.Size(650, 417);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Setting";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1482,9 +1545,9 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtidPortProxy);
-            this.groupBox1.Location = new System.Drawing.Point(4, 424);
+            this.groupBox1.Location = new System.Drawing.Point(4, 439);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(650, 109);
+            this.groupBox1.Size = new System.Drawing.Size(650, 94);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proxy Setting";
@@ -1594,6 +1657,16 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(569, 5);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 42);
+            this.button23.TabIndex = 12;
+            this.button23.Text = "Record";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1606,6 +1679,7 @@
             this.Controls.Add(this.txtDeviceID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tabControl1);
+            this.Location = new System.Drawing.Point(200, 200);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -1621,6 +1695,8 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1644,7 +1720,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
@@ -1719,18 +1794,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRRS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CountryRRS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCreate;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button btnStartRRS;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameOffer;
@@ -1779,10 +1842,30 @@
         private System.Windows.Forms.TextBox txtCountrySetting;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.ComboBox cbxRRSbyApp;
         private System.Windows.Forms.CheckBox cbRRSbyAPP;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button19;
+        public System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button23;
     }
 }
 

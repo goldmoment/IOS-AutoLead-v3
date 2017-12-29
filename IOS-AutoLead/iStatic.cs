@@ -10,6 +10,7 @@ namespace IOS_AutoLead
 {
     public class iStatic
     {
+        public static string closeForm3 = string.Empty;
         public static string status =  string.Empty;
         public static string ipIphone = string.Empty;
         public static string diraidIphone = string.Empty;

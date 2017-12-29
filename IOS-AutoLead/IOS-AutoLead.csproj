@@ -71,6 +71,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThuVienDll\bin\Release\ThuVienDll.dll</HintPath>
     </Reference>
+    <Reference Include="VncSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=61974755c7bfea7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\VncSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backup.cs" />
@@ -87,6 +91,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\CONX.cs" />
     <Compile Include="Global\Extensions.cs" />
     <Compile Include="Global\StringFunctions.cs" />
@@ -95,6 +105,7 @@
     <Compile Include="Offer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Run.cs" />
+    <Compile Include="ScriptCode.cs" />
     <Compile Include="SSH.cs" />
     <Compile Include="sshNet.cs" />
     <Compile Include="ThreadRunLead.cs" />
@@ -103,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -65,7 +66,7 @@ namespace IOS_AutoLead
         }
         public bool openUrl(string url,int timeoutUrl)
         {
-            ssh.UploadFile("/var/mobile/Library/AutoTouch/Scripts/", "./"+iStatic.ipIphone+"/openlink.lua");
+           
             if (!ssh.openlink(url)) { return false; }
             //check appstore open
             DateTime startTime = DateTime.Now;
@@ -96,19 +97,13 @@ namespace IOS_AutoLead
         public bool script(string[] arr)
         {
             Thread.Sleep(2000);
-            foreach(string str in arr)
-            {
-                File.WriteAllText(iStatic.ipIphone + "/Script.lua", str);
-                ssh.UploadFile("/var/mobile/Library/AutoTouch/Scripts/", "./" + iStatic.ipIphone + "/Script.lua");
-                ThuVienDll.RequestServer.HTTP_GET("http://" + iStatic.ipIphone + ":8080/control/start_playing?path=Script.lua", "");
-            }
+            ScriptCode scripCode = new ScriptCode();
+            scripCode.runScript(arr);
             return true;
         }
         //Backup--------------------------------------------------------------------------------
         public bool Backup(string app,string country)
         {
-       
-        
             string date = "_" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + "_" + ssh.random(1111, 99999) + "_0";
             if (!ssh.backUpApp(app, country, date)) {  ssh.deleteFile("/var/root/backup/", app + "_"+ country + date); return false; } else { return true; } ;
 

@@ -14,6 +14,8 @@ namespace IOS_AutoLead
 {
     public class sshNet
     {
+
+
         string ip;
         string nameapp = "com.mins.iPhoneChanger";
         ThuVienDll.FuncFolder tvFile;
@@ -22,7 +24,7 @@ namespace IOS_AutoLead
         {
             this.ip = ip;
         }
-
+      
         //Func 
         public void ErrorSaveLog(string str)
         {
